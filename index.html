@@ -302,6 +302,8 @@ section { position: relative; z-index: 1; padding: 86px 0; }
   border-radius: 999px;
 }
 
+.nw { white-space: nowrap; }
+
 /* ---------- News on top ---------- */
 .news-strip {
   background: var(--paper-deep);
@@ -591,10 +593,15 @@ footer.site-footer {
 }
 
 @media (max-width: 520px) {
-  .header-inner { padding: 12px 18px; }
+  .header-inner { padding: 12px 18px; gap: 10px; flex-wrap: wrap; row-gap: 6px; }
   .wrap, .hero-inner, section .wrap { padding-left: 18px; padding-right: 18px; }
   .brand-text .ja { font-size: 1.02rem; }
   .header-tel small { display: none; }
+  .brand-logo { height: 40px; }
+  .header-tel .num { font-size: 1.1rem; }
+  .cta-band p { white-space: normal !important; }
+  .breadcrumb { flex-wrap: wrap; row-gap: 4px; }
+  .nw { white-space: normal; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -675,8 +682,8 @@ footer.site-footer {
     </div>
     <div>
       <span class="eyebrow">大阪市住之江区・東住吉区エリア</span>
-      <h1><span style="white-space:nowrap;">あなたの「こうしたい」を、いちばん大切に。</span><br><span class="accent">あなたらしい暮らし</span>を支えます。</h1>
-      <p class="lead">重度訪問介護・居宅介護・移動支援・同行援助。<br><span style="white-space:nowrap;">マニュアル通りではなく、あなた自身の暮らし方・望み方に合わせたサポートを、</span><br>スタッフと一緒に考えながら届けます。</p>
+      <h1><span class="nw">あなたの「こうしたい」を、いちばん大切に。</span><br><span class="accent">あなたらしい暮らし</span>を支えます。</h1>
+      <p class="lead">重度訪問介護・居宅介護・移動支援・同行援助。<br><span class="nw">マニュアル通りではなく、あなた自身の暮らし方・望み方に合わせたサポートを、</span><br>スタッフと一緒に考えながら届けます。</p>
       <div class="btn-row" style="justify-content:center;">
         <a href="service.html" class="btn btn-primary">サービスを見る</a>
         <a href="tel:06-6105-3427" class="btn btn-outline">お電話で相談する</a>
@@ -702,8 +709,8 @@ footer.site-footer {
   <span style="color:#F2A0A0; font-size:1.2rem; letter-spacing:6px;">✦ ✦ ✦</span>
 </div>
 <h2 style="font-size: clamp(2.2rem, 4vw, 3rem); color: #7A5C4E;">あなたの隣に、<br>等身大のチームがいます。</h2>
-      <p style="display:flex; flex-direction:column; align-items:center;"><span style="white-space:nowrap;">ヘルパーは「お世話をする人」ではなく、あなたの暮らしを一緒に考えるパートナーだと思っています。</span><span style="white-space:nowrap;">気軽に話せる雰囲気を大切にしており、やってみたいことがあれば、ぜひ一緒にチャレンジしましょう。</span></p>
-      <ul class="checklist" style="text-align:left; max-width:600px; margin:22px auto 0; white-space:nowrap; list-style:none; padding:0;">
+      <p style="display:flex; flex-direction:column; align-items:center;"><span class="nw">ヘルパーは「お世話をする人」ではなく、あなたの暮らしを一緒に考えるパートナーだと思っています。</span><span class="nw">気軽に話せる雰囲気を大切にしており、やってみたいことがあれば、ぜひ一緒にチャレンジしましょう。</span></p>
+      <ul class="checklist nw" style="text-align:left; max-width:600px; margin:22px auto 0; list-style:none; padding:0;">
         <li>気軽に話せる雰囲気で、フットワーク軽く対応します</li>
         <li>「やりたいこと」を起点に、支援のかたちを一緒に考えます</li>
         <li>介護保険サービスにも対応可能</li>
@@ -720,7 +727,7 @@ footer.site-footer {
   <div class="wrap">
     <div class="section-head center">
       <h2 style="font-size: clamp(2rem, 3.6vw, 2.8rem); display:inline-block; background:#FFF9D6; padding:8px 28px; border-radius:8px; color:#D96A1E; border:1px solid #EEE0A0; outline: 2px dashed #F2A0A0; outline-offset: -6px;">提供しているサービス</h2>
-      <p style="text-align:center; width:100%;"><span style="white-space:nowrap;">日常のケアから外出のサポートまで、生活のさまざまな場面でお手伝いします。</span><br>「こんなことはお願いできる？」と思ったら、まずお気軽にご相談ください。</p>
+      <p style="text-align:center; width:100%;"><span class="nw">日常のケアから外出のサポートまで、生活のさまざまな場面でお手伝いします。</span><br>「こんなことはお願いできる？」と思ったら、まずお気軽にご相談ください。</p>
     </div>
     <div class="service-grid">
       <div class="service-card">

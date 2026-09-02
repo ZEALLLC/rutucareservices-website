@@ -2,808 +2,293 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ルーツケアサービス | 大阪市の訪問介護・重度訪問介護・移動支援</title>
-<meta name="description" content="ルーツケアサービスは大阪市住之江区を拠点に、重度訪問介護・居宅介護・移動支援・同行援助を提供する訪問介護事業所です。一人ひとりの「本当に必要なサポート」に寄り添います。">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap');
-
-:root {
-  --brown: #3E2A20;
-  --brown-soft: #6B4E3D;
-  --teal: #D96A1E;
-  --teal-soft: #FDEACD;
-  --paper: #FEF0F2;
-  --paper-deep: #F7E0E4;
-  --ink: #241B14;
-  --terracotta: #C97B4A;
-  --line: rgba(62, 42, 32, 0.16);
-  --r-sm: 16px;
-  --r-md: 26px;
-  --r-lg: 34px;
-}
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.9;
-  letter-spacing: 0.02em;
-  -webkit-font-smoothing: antialiased;
-}
-
-img { max-width: 100%; display: block; }
-
-a { color: inherit; text-decoration: none; }
-
-h1, h2, h3, .brand {
-  font-family: 'Noto Sans JP', sans-serif;
-  letter-spacing: 0.03em;
-}
-
-.wrap {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-/* paper texture */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(62,42,32,0.025) 0, transparent 45%),
-    radial-gradient(circle at 80% 70%, rgba(63,143,160,0.03) 0, transparent 45%);
-  z-index: 0;
-}
-
-/* ---------- Header ---------- */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(254, 240, 242, 0.92);
-  backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--line);
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 32px;
-  max-width: 1080px;
-  margin: 0 auto;
-  gap: 24px;
-}
-
-.brand-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
-.brand-logo {
-  height: 52px;
-  width: auto;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.brand-text .ja {
-  font-size: 1.18rem;
-  font-weight: 700;
-  color: var(--brown);
-}
-
-.brand-text .en {
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  color: var(--teal);
-  font-weight: 700;
-}
-
-nav.main-nav {
-  display: flex;
-  gap: 28px;
-  font-size: 1.05rem;
-  font-weight: 500;
-}
-
-nav.main-nav a {
-  position: relative;
-  padding: 6px 2px;
-  color: var(--brown);
-}
-
-nav.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 2px;
-  background: var(--teal);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.25s ease;
-}
-
-nav.main-nav a:hover::after,
-nav.main-nav a.active::after {
-  transform: scaleX(1);
-}
-
-.header-tel {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  color: var(--brown);
-  font-size: 1.05rem;
-  flex-shrink: 0;
-}
-
-.header-tel .num {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 2rem;
-  color: var(--teal);
-}
-
-.header-tel small {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: var(--brown-soft);
-}
-
-/* ---------- Cord divider (signature element) ---------- */
-.cord-divider {
-  width: 100%;
-  height: 28px;
-  margin: 0 auto;
-}
-
-.cord-divider svg { width: 100%; height: 100%; display: block; }
-
-/* ---------- Hero ---------- */
-.hero {
-  position: relative;
-  padding: 90px 0 110px;
-  overflow: hidden;
-}
-
-.hero-inner {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 32px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 32px;
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--teal);
-  letter-spacing: 0.1em;
-  margin-bottom: 18px;
-}
-
-.eyebrow::before {
-  content: "";
-  width: 26px;
-  height: 2px;
-  background: var(--teal);
-  display: inline-block;
-}
-
-.hero h1 {
-  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-  font-weight: 400;
-  color: var(--brown);
-  line-height: 1.55;
-  margin: 0 0 26px;
-}
-
-.hero h1 .accent {
-  color: var(--teal);
-}
-
-.hero p.lead {
-  font-size: 1.18rem;
-  color: var(--brown-soft);
-  margin: 0 auto 34px;
-  text-align: center;
-  width: 100%;
-}
-
-.btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 17px 32px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 1.08rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-primary {
-  background: var(--teal);
-  color: #fff;
-  box-shadow: 0 8px 20px -8px rgba(217,106,30,0.45);
-}
-
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -8px rgba(217,106,30,0.5); }
-
-.btn-outline {
-  border: 1.5px solid var(--brown);
-  color: var(--brown);
-}
-
-.btn-outline:hover { background: var(--brown); color: #fff; }
-
-.hero-visual {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-visual img {
-  width: 100%;
-  max-width: 420px;
-  filter: drop-shadow(0 18px 30px rgba(62,42,32,0.18));
-}
-
-/* ---------- Section generic ---------- */
-section { position: relative; z-index: 1; padding: 86px 0; }
-
-.section-head { max-width: 820px; margin: 0 0 50px; }
-
-.section-head.center { margin: 0 auto 50px; text-align: center; }
-
-.section-head h2 {
-  font-size: clamp(1.7rem, 3.1vw, 2.3rem);
-  font-weight: 400;
-  color: var(--brown);
-  margin: 10px 0 14px;
-}
-
-.section-head p { color: var(--brown-soft); font-size: 1.2rem; }
-
-.tag {
-  display: inline-block;
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--teal);
-  background: var(--teal-soft);
-  padding: 6px 16px;
-  border-radius: 999px;
-}
-
-.nw { white-space: nowrap; }
-
-/* ---------- News on top ---------- */
-.news-strip {
-  background: var(--paper-deep);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.news-strip .wrap {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  padding: 22px 32px;
-  flex-wrap: wrap;
-}
-
-.news-strip .tag { flex-shrink: 0; }
-
-.news-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1;
-  min-width: 240px;
-}
-
-.news-list a {
-  display: flex;
-  gap: 14px;
-  font-size: 1.02rem;
-  color: var(--brown);
-}
-
-.news-list time {
-  color: var(--brown-soft);
-  font-size: 0.94rem;
-  flex-shrink: 0;
-  font-feature-settings: "tnum";
-}
-
-.news-list a span.title { text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 4px; }
-.news-list a:hover span.title { text-decoration-color: var(--teal); }
-
-.news-more {
-  flex-shrink: 0;
-  font-size: 0.98rem;
-  font-weight: 700;
-  color: var(--teal);
-  white-space: nowrap;
-}
-
-/* ---------- Service cards ---------- */
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-}
-
-.service-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--r-md);
-  padding: 30px 28px;
-  position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 32px -16px rgba(62,42,32,0.22);
-}
-
-.service-card .num {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: var(--teal);
-  letter-spacing: 0.08em;
-}
-
-.service-card h3 {
-  font-size: 1.7rem;
-  color: var(--brown);
-  margin: 8px 0 12px;
-  font-weight: 400;
-}
-
-.service-card p {
-  font-size: 1.2rem;
-  color: var(--brown-soft);
-  margin: 0;
-}
-
-/* ---------- About preview / split ---------- */
-.split {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 56px;
-  align-items: center;
-}
-
-.split.reverse { grid-template-columns: 1.05fr 0.95fr; }
-.split.reverse .split-visual { order: 2; }
-
-.split-visual img {
-  border-radius: var(--r-md);
-  width: 100%;
-}
-
-.split-visual {
-  position: relative;
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  aspect-ratio: 4/3.2;
-  background: linear-gradient(135deg, var(--teal-soft), var(--paper-deep));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.split-visual .ph-mark {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  color: var(--teal);
-  opacity: 0.5;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-}
-
-.split-body h2 { margin-top: 10px; }
-
-.split-body p { color: var(--brown-soft); margin-bottom: 16px; }
-
-.checklist { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
-
-.checklist li {
-  display: flex;
-  gap: 10px;
-  font-size: 1.25rem;
-  color: var(--ink);
-}
-
-.checklist li::before {
-  content: "";
-  width: 21px; height: 21px;
-  margin-top: 4px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: var(--teal);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M9 16.2l-3.5-3.5L4 14.2l5 5 11-11-1.5-1.5z'/%3E%3C/svg%3E");
-  background-size: 15px; background-repeat: no-repeat; background-position: center;
-}
-
-/* ---------- Flow steps ---------- */
-.flow-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  position: relative;
-}
-
-.flow-step {
-  position: relative;
-  padding: 0 18px 0 0;
-}
-
-.flow-step .step-num {
-  font-family: 'Zen Maru Gothic', sans-serif;
-  font-weight: 900;
-  font-size: 2.4rem;
-  color: var(--teal-soft);
-  -webkit-text-stroke: 1.5px var(--teal);
-  line-height: 1;
-}
-
-.flow-step h4 {
-  margin: 14px 0 8px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--brown);
-}
-
-.flow-step p { font-size: 0.98rem; color: var(--brown-soft); margin: 0; }
-
-/* ---------- CTA band ---------- */
-.cta-band {
-  background: #C8E8F0;
-  border-radius: 12px;
-  padding: 12px 0;
-  max-width: 860px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: nowrap;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-band h2 { color: #111111; font-size: clamp(1.3rem, 2.2vw, 1.7rem); font-weight: 400; margin: 0 0 4px; }
-.cta-band p { color: #111111; margin: 0; max-width: none; font-size: 1.15rem; white-space: nowrap; }
-.cta-band .btn-primary { background: #fff; color: #1A3A4A; border-radius: 8px; box-shadow: none; }
-.cta-band .btn-row { flex: 0; justify-content: flex-start; padding: 0; }
-.cta-band .btn-outline { border-color: #1A3A4A; color: #1A3A4A; }
-.cta-band .btn-outline:hover { background: #1A3A4A; color: #fff; }
-
-/* ---------- Footer ---------- */
-footer.site-footer {
-  background: var(--paper-deep);
-  border-top: 1px solid var(--line);
-  padding: 56px 0 28px;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr;
-  gap: 36px;
-  margin-bottom: 40px;
-}
-
-.footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
-.footer-brand img { height: 62px; }
-.footer-brand .ja { font-weight: 700; color: var(--brown); font-size: 1.35rem; }
-.footer-brand .en { font-size: 0.66rem; color: var(--teal); letter-spacing: 0.16em; font-weight: 700; }
-
-.footer-col h5 {
-  font-size: 1.1rem;
-  color: var(--teal);
-  letter-spacing: 0.08em;
-  margin: 0 0 16px;
-}
-
-.footer-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-.footer-col a, .footer-col p { font-size: 1.15rem; color: var(--brown-soft); margin: 0; }
-.footer-col a:hover { color: var(--teal); }
-
-.footer-bottom {
-  border-top: 1px solid var(--line);
-  padding-top: 22px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  color: var(--brown-soft);
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* ---------- Page header (sub pages) ---------- */
-.page-header {
-  padding: 64px 0 56px;
-  text-align: center;
-}
-
-.page-header .tag { margin-bottom: 16px; }
-
-.page-header h1 {
-  font-size: clamp(2rem, 3.8vw, 2.9rem);
-  color: var(--brown);
-  font-weight: 400;
-  margin: 0 0 14px;
-}
-
-.page-header p { color: var(--brown-soft); max-width: 560px; margin: 0 auto; font-size: 1.1rem; }
-
-.breadcrumb {
-  font-size: 0.92rem;
-  color: var(--brown-soft);
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-.breadcrumb a { color: var(--teal); }
-
-/* ---------- Responsive ---------- */
-@media (max-width: 880px) {
-  nav.main-nav { display: none; }
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; }
-  .hero { padding: 56px 0 70px; }
-  .split, .split.reverse { grid-template-columns: 1fr; }
-  .split.reverse .split-visual { order: 0; }
-  .service-grid { grid-template-columns: 1fr; }
-  .flow-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .cta-band { padding: 40px 28px; flex-direction: column; text-align: center; }
-  .footer-bottom { flex-direction: column; text-align: center; }
-}
-
-@media (max-width: 520px) {
-  .header-inner { padding: 12px 18px; gap: 10px; flex-wrap: wrap; row-gap: 6px; }
-  .wrap, .hero-inner, section .wrap { padding-left: 18px; padding-right: 18px; }
-  .brand-text .ja { font-size: 1.02rem; }
-  .header-tel small { display: none; }
-  .brand-logo { height: 40px; }
-  .header-tel .num { font-size: 1.1rem; }
-  .cta-band p { white-space: normal !important; }
-  .breadcrumb { flex-wrap: wrap; row-gap: 4px; }
-  .nw { white-space: normal; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; }
-}
-
-
-.deco-heading {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-.deco-heading::before,
-.deco-heading::after {
-  content: '';
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: #F2A0A0;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.section-dots {
-  position: relative;
-}
-.section-dots::before {
-  content: '';
-  position: absolute;
-  top: 20px; right: 24px;
-  width: 60px; height: 60px;
-  background-image: radial-gradient(circle, #FDEACD 2px, transparent 2px);
-  background-size: 12px 12px;
-  border-radius: 50%;
-  opacity: 0.7;
-  pointer-events: none;
-}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>大阪市住吉区の就労継続支援B型事業所｜おひさまとにじのおうち</title>
+<meta name="description" content="大阪市住吉区の就労継続支援B型事業所「おひさまとにじのおうち」。カフェ作業や在宅ワーク、子ども食堂の運営を通じて、一人ひとりに合った働き方を応援しています。">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="header-inner">
-    <a href="index.html" class="brand-link">
-      <img src="logo.png" alt="ルーツケアサービス ロゴ" class="brand-logo">
-      <span class="brand-text">
-        <span class="ja">ルーツケアサービス</span>
-        <span class="en">ROOTS CARE SERVICE</span>
-      </span>
+    <a href="index.html" class="logo">
+      <span class="mark"></span>
+      <span>おひさまとにじのおうち<small>就労継続支援B型作業所</small></span>
     </a>
     <nav class="main-nav">
-      <a href="index.html" class="active">トップ</a>
-      <a href="about.html">私たちについて</a>
-      <a href="service.html">サービス</a>
-      <a href="news.html">お知らせ</a>
+      <ul>
+        <li><a href="index.html" class="active">TOP</a></li>
+        <li><a href="cafe.html">虹のカフェ</a></li>
+        <li><a href="kodomo-shokudo.html">子ども食堂</a></li>
+        <li><a href="blog.html">ブログ/お知らせ</a></li>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="group.html">グループ</a></li>
+        <li><a href="contact.html">お問合せ</a></li>
+      </ul>
     </nav>
-    <a href="tel:06-6105-3427" class="header-tel">
-      <span>
-        <span class="num">06-6105-3427</span>
-        <small>受付対応時間 9:00〜18:00</small>
-      </span>
-    </a>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
   </div>
 </header>
-
-<div class="cord-divider">
-  <svg viewBox="0 0 1200 28" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 14 Q 50 2, 100 14 T 200 14 T 300 14 T 400 14 T 500 14 T 600 14 T 700 14 T 800 14 T 900 14 T 1000 14 T 1100 14 T 1200 14"
-      fill="none" stroke="#D96A1E" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7"/>
-  </svg>
-</div>
+<div class="nav-overlay"></div>
+<div class="rainbow-bar"></div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-visual">
-      <img src="logo.png" alt="ルーツケアサービス ロゴ">
+<div class="hero" style="background-image:url('hero-illustration.jpg');background-repeat:no-repeat;background-position:top center;background-size:auto 1300px;padding:64px 0 420px;">
+  <div class="hero-inner" style="text-shadow:0 0 10px #fff,0 0 10px #fff,0 0 18px #fff,0 0 18px #fff;">
+    <span class="eyebrow" style="margin-top:150px;display:inline-block;">大阪市住吉区<br>就労継続支援B型作業所</span>
+    <div class="hero-overlay-box" style="background:rgba(255,255,255,.4);border-radius:28px;padding:28px 20px 36px;">
+      <div class="hero-title-wrap">
+        <div class="hero-title" style="font-size:1.6rem;font-weight:800;color:var(--sun-orange-dark);background:none;padding:0;line-height:1.4;">おひさまと<br>にじのおうち</div>
+      </div>
+      <h1 class="nowrap-text hero-sub" style="font-size:clamp(.85rem,1.8vw,1.1rem);margin:10px 0 0;"><span>―あたたかな陽射しの中で、</span><span class="mb-break">自分らしい一歩を―</span></h1>
+      <p class="lead" style="max-width:820px;"><span class="nowrap-text">「おひさまとにじのおうち」は、地域の中で誰もが</span><span class="nowrap-text mb-break">自分らしく輝けるよう</span><br>寄り添う就労継続支援<span class="mb-break">B型事業所です。</span><br>カフェでの調理・接客、パソコンを使った軽作業、在宅ワーク、子ども食堂の運営まで、<br>それぞれの得意やペースに合わせて<span class="mb-break">選べる活動をご用意しています。</span></p>
     </div>
-    <div>
-      <span class="eyebrow">大阪市住之江区・東住吉区エリア</span>
-      <h1><span class="nw">あなたの「こうしたい」を、いちばん大切に。</span><br><span class="accent">あなたらしい暮らし</span>を支えます。</h1>
-      <p class="lead">重度訪問介護・居宅介護・移動支援・同行援助。<br><span class="nw">マニュアル通りではなく、あなた自身の暮らし方・望み方に合わせたサポートを、</span><br>スタッフと一緒に考えながら届けます。</p>
-      <div class="btn-row" style="justify-content:center;">
-        <a href="service.html" class="btn btn-primary">サービスを見る</a>
-        <a href="tel:06-6105-3427" class="btn btn-outline">お電話で相談する</a>
+    <div class="hero-meta">
+      <span>営業時間 9:00〜16:00</span>
+      <span>定休日 日曜日</span>
+    </div>
+    <div class="hero-cta">
+      <a href="contact.html" class="btn btn-primary" style="text-shadow:none;">見学・体験申し込み</a>
+      <a href="tel:0666158340" class="btn btn-outline" style="text-shadow:none;">📞 06-6615-8340</a>
+    </div>
+  </div>
+</div>
+
+<!-- 私達について -->
+<section>
+  <div class="wrap" style="max-width:1000px;text-align:center;">
+    <h2 class="heading-framed" style="font-size:1.5rem;font-weight:800;margin:10px auto 18px;text-align:center;">私達について</h2>
+    <p>『おひさまとにじのおうち』は、障がいのある方が地域の一員として<br>無理なく力を発揮できるよう支援する就労継続支援B型事業所です。</p>
+    <p style="max-width:950px;margin-left:auto;margin-right:auto;"><span class="nowrap-text">地域とのつながりを大切にしながら、子ども食堂の運営やパソコン作業、手づくりの商品づくりなど、</span><br>さまざまな活動を通じて一人ひとりに合った働き方を後押ししています。</p>
+  </div>
+</section>
+
+<!-- B型作業所とは -->
+<section class="alt-bg">
+  <div class="wrap" style="max-width:1000px;text-align:center;">
+    <h2 class="heading-framed" style="font-size:1.5rem;font-weight:800;margin:10px auto 18px;">就労継続支援B型作業所とは？</h2>
+    <p>障がいや難病などが理由で一般企業への就職が難しい方に向けて、<br>軽作業を通じて働く感覚を身につけていただける福祉サービスです。<br>体調や本人のペースに合わせて短時間から利用でき、<br>少しずつ経験を積みながら就労スキルの向上を目指せます。</p>
+    <p style="max-width:900px;margin-left:auto;margin-right:auto;"><span class="nowrap-text">「働きたいけれど一般企業で働く自信がない」「いつかは一般就労を目指したい」</span><br>「何から始めればいいかわからない」——<br><span class="nowrap-text">そうした気持ちに寄り添い、「やってみたい」を後押しする場所でありたいと考えています。</span></p>
+  </div>
+</section>
+
+<!-- 活動内容 -->
+<section id="activities">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="heading-framed">活動内容</h2>
+      <p style="max-width:620px;"><span class="nowrap-text">得意なことや興味に合わせて選べる、4つの作業をご紹介します。</span></p>
+    </div>
+    <div class="card-grid card-grid-2">
+      <div class="card">
+        <h3>カフェ作業</h3>
+        <p>地域のお客さまに向けて、厚焼きたまごサンドやドリンクの調理・販売を行っています。調理や盛り付け、接客、清掃まで工程はさまざまなので、自分の得意なところから参加できます。</p>
+        <a href="cafe.html" class="link">虹のカフェメニューを見る ›</a>
+      </div>
+      <div class="card">
+        <h3>PC作業</h3>
+        <p>タイピングの練習や、決められた内容を入力するシンプルな作業からスタートできるので、パソコンに不慣れな方でも安心です。スタッフが隣でサポートしながら、少しずつ慣れていただけます。</p>
+      </div>
+      <div class="card">
+        <h3>在宅作業</h3>
+        <p>体調や生活のリズムに合わせて、ご自宅で取り組んでいただける作業です。データ入力やシール貼りなどの軽作業を、無理のないペースで進めていただけます。</p>
+      </div>
+      <div class="card">
+        <h3>子ども食堂の運営</h3>
+        <p>食材の下ごしらえや調理の補助、盛り付け、配膳、後片付けまでをスタッフと一緒に担当します。子どもたちとふれあいながら、地域とのつながりや社会参加のやりがいを感じていただける活動です。</p>
+        <a href="kodomo-shokudo.html" class="link">子ども食堂について ›</a>
       </div>
     </div>
   </div>
 </section>
-<!-- NEWS -->
-<div class="news-strip">
-  <div class="wrap">
-    <div class="news-list">
-      <a href="news-item-1.html"><time>2024.12.25</time><span class="title">令和７年2月より事業所移転しました</span></a>
-    </div>
-    <a href="news.html" class="news-more">お知らせ一覧 →</a>
-  </div>
-</div>
 
-<!-- ABOUT PREVIEW -->
+<!-- ご利用までの流れ -->
+<section class="alt-bg">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="heading-framed">ご利用までの流れ</h2>
+      <p style="max-width:620px;"><span class="nowrap-text">お問い合わせからご利用開始まで、一つひとつ丁寧にサポートいたします。</span></p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h4>お問い合わせ</h4>
+        <p>お電話またはフォームより、まずはお気軽にご連絡ください。</p>
+      </div>
+      <div class="step">
+        <h4>見学のご予約</h4>
+        <p>スタッフが施設の様子やサービスの内容を詳しくご案内します。</p>
+      </div>
+      <div class="step">
+        <h4>体験利用</h4>
+        <p>実際の作業や雰囲気を体験しながら、ご自身に合うかどうかをじっくり確かめていただけます。</p>
+      </div>
+      <div class="step">
+        <h4>ご利用開始</h4>
+        <p>ご納得いただけましたら、手続きを経てご利用をスタートします。</p>
+      </div>
+    </div>
+    <p class="center mt-40" style="color:var(--text-sub);">ご不安な点やご質問があれば、どんなことでもお気軽にお尋ねください。</p>
+    <div class="center mt-40">
+      <a href="contact.html" class="btn btn-primary">見学・体験申し込みフォーム</a>
+    </div>
+  </div>
+</section>
+
+<!-- 施設について -->
 <section>
   <div class="wrap">
-    <div class="split-body" style="max-width:680px; margin:0 auto; text-align:center;">
-      <div style="text-align:center; margin-bottom:6px;">
-  <span style="color:#F2A0A0; font-size:1.2rem; letter-spacing:6px;">✦ ✦ ✦</span>
-</div>
-<h2 style="font-size: clamp(2.2rem, 4vw, 3rem); color: #7A5C4E;">あなたの隣に、<br>等身大のチームがいます。</h2>
-      <p style="display:flex; flex-direction:column; align-items:center;"><span class="nw">ヘルパーは「お世話をする人」ではなく、あなたの暮らしを一緒に考えるパートナーだと思っています。</span><span class="nw">気軽に話せる雰囲気を大切にしており、やってみたいことがあれば、ぜひ一緒にチャレンジしましょう。</span></p>
-      <ul class="checklist nw" style="text-align:left; max-width:600px; margin:22px auto 0; list-style:none; padding:0;">
-        <li>気軽に話せる雰囲気で、フットワーク軽く対応します</li>
-        <li>「やりたいこと」を起点に、支援のかたちを一緒に考えます</li>
-        <li>介護保険サービスにも対応可能</li>
-      </ul>
-      <div class="btn-row" style="margin-top:28px; justify-content:center;">
-        <a href="about.html" class="btn btn-outline">私たちについて詳しく見る</a>
-      </div>
+    <div class="section-head">
+      <h2 class="heading-framed">施設について</h2>
+      <p style="margin-top:28px;max-width:840px;margin-left:auto;margin-right:auto;"><span class="nowrap-text">施設内は、はじめての方でも安心して過ごせる環境づくりを、なにより大切にしています。</span><br>調理活動に使うキッチンや、パソコン作業に対応したスペースをはじめ、<br>休憩できるくつろぎのスペースも整えています。<br>それぞれの得意や関心、その日の体調に応じて作業内容や過ごし方を選べるので、<br>無理なく自分らしいペースで通っていただけます。<br>スタッフも常駐しているので、困ったことがあればいつでも気軽に声をかけてください。</p>
     </div>
   </div>
 </section>
 
-<!-- SERVICE PREVIEW -->
-<section style="background:var(--paper-deep); position:relative; overflow:hidden;">
+<!-- アクセス -->
+<section class="alt-bg">
   <div class="wrap">
-    <div class="section-head center">
-      <h2 style="font-size: clamp(2rem, 3.6vw, 2.8rem); display:inline-block; background:#FFF9D6; padding:8px 28px; border-radius:8px; color:#D96A1E; border:1px solid #EEE0A0; outline: 2px dashed #F2A0A0; outline-offset: -6px;">提供しているサービス</h2>
-      <p style="text-align:center; width:100%;"><span class="nw">日常のケアから外出のサポートまで、生活のさまざまな場面でお手伝いします。</span><br>「こんなことはお願いできる？」と思ったら、まずお気軽にご相談ください。</p>
+    <div class="section-head">
+      <h2 class="heading-framed">アクセス</h2>
     </div>
-    <div class="service-grid">
-      <div class="service-card">
-        <span class="num">1 / 居宅介護</span>
-        <p>ホームヘルパーがご自宅を訪問し、入浴・排せつ・食事の介護や、調理・洗濯・掃除などの家事から、通院のお付き添いまで、日々の生活を幅広くサポートします。</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6568.505170858359!2d135.5023708!3d34.5977739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000dc419c512327%3A0xd790cfec7b8e1fd2!2z44CSNTU4LTAwMjMg5aSn6Ziq5bqc5aSn6Ziq5biC5L2P5ZCJ5Yy65bGx5LmL5YaF77yS5LiB55uu77yR77yR4oiS77yS77yZIO-9ge-9lO-9he-9jO-9ie-9he-9kiDvvLPvvKjvvKnvvK7vvK_vvKLvvLU!5e0!3m2!1sja!2sjp!4v1758422798997!5m2!1sja!2sjp" width="100%" height="300" style="border:0;border-radius:24px;box-shadow:var(--shadow-soft);margin-bottom:24px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="地図"></iframe>
+    <div style="overflow-x:auto;">
+      <table class="info-table" style="max-width:900px;margin:0 auto;">
+        <tr><th style="text-align:center;">住所</th><td style="text-align:center;">〒558-0023<br>大阪市住吉区山之内2-11-29</td></tr>
+        <tr><th style="text-align:center;">アクセス</th><td class="access-cell" style="text-align:center;">JR我孫子町駅 徒歩9分<br>JR杉本町駅 徒歩7分<br>大阪メトロ御堂筋線 あびこ駅4番出口 徒歩14分</td></tr>
+        <tr><th style="text-align:center;">営業時間</th><td class="access-cell" style="text-align:center;">9:00〜16:00</td></tr>
+        <tr><th style="text-align:center;">定休日</th><td class="access-cell" style="text-align:center;">日曜日</td></tr>
+        <tr><th style="text-align:center;">電話</th><td style="text-align:center;"><a href="tel:0666158340">06-6615-8340</a></td></tr>
+        <tr><th style="text-align:center;">FAX</th><td style="text-align:center;">06-6615-8341</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ブログ最新3件 -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="heading-framed">お知らせ</h2>
+    </div>
+    <div class="card-grid">
+      <div class="blog-card">
+        <span class="date">2026年6月24日</span>
+        <h3>🌸ハムさん、新たな一歩へ🌸</h3>
+        <p>ブログをいつも担当してくれていたハムさんがステップアップのために当事業所を卒業し、就労移行支援事業所へ進まれることになりました。</p>
+        <a class="link" href="blog-ham-new-step.html">続きを読む ›</a>
       </div>
-      <div class="service-card">
-        <span class="num">2 / 重度訪問介護</span>
-        <p>常時介護が必要な方が、安心して地域で暮らし続けられるよう、日常の介護から外出時のサポートまで長時間・継続的にお手伝いします。</p>
+      <div class="blog-card">
+        <span class="date">2026年6月6日</span>
+        <h3>おひさまとにじのおうちの販売コーナー🌈🌞</h3>
+        <p>事業所の前で利用者さんが製作した作品の販売を行っています。レジンのぷっくりシールやアイロンビーズのキーホルダーなど。</p>
+        <a class="link" href="blog-sales-corner.html">続きを読む ›</a>
       </div>
-      <div class="service-card">
-        <span class="num">3 / 移動支援</span>
-        <p>買い物・通院・レジャーなど、外出したい場面を幅広くサポートします。視覚・聴覚・知的・精神障がいのある方にご利用いただけます。</p>
-      </div>
-      <div class="service-card">
-        <span class="num">4 / 同行援助</span>
-        <p>視覚障がいにより外出が難しい方に寄り添い、必要な情報をお伝えしながら安全に移動できるようサポートします。</p>
+      <div class="blog-card">
+        <span class="date">2026年5月7日</span>
+        <h3>✨みんなのやってみたい✨</h3>
+        <p>最近もみなさん、それぞれ好きなことや得意なことを見つけながら、毎日楽しく過ごされています。</p>
+        <a class="link" href="blog-minna-yattemitai.html">続きを読む ›</a>
       </div>
     </div>
-    <div class="btn-row" style="justify-content:center; margin-top:40px;">
-      <a href="service.html" class="btn btn-primary">サービスの詳細・ご利用の流れ</a>
+    <div class="center mt-40">
+      <a href="blog.html" class="btn btn-outline">ブログ・お知らせをもっとみる ›</a>
     </div>
+  </div>
+</section>
+
+<!-- Q&A -->
+<section class="alt-bg">
+  <div class="wrap faq-static">
+    <div class="section-head">
+      <h2 class="heading-framed">よくあるご質問</h2>
+    </div>
+    <details class="faq-item" open>
+      <summary class="faq-q">営業日と営業時間を教えてください。</summary>
+      <div class="faq-a">月曜日から土曜日、9時から16時まで営業しています。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">利用できる年齢に決まりはありますか？</summary>
+      <div class="faq-a">18歳以上であれば、年齢の上限は特に設けておりません。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">見学や体験利用はできますか？</summary>
+      <div class="faq-a">事前にご一報いただければ、いつでも見学・体験利用を受け付けています。まずは実際の雰囲気を見てから、ゆっくりご検討ください。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">未経験でも働けますか？</summary>
+      <div class="faq-a">はい、まったくの未経験からでも大丈夫です。作業を通して少しずつスキルを身につけていけるので、無理なく取り組んでいただけます。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">自宅での作業は可能ですか？</summary>
+      <div class="faq-a">在宅での作業にも対応しています。パソコンを使った軽作業など、ご自宅で完結するお仕事をご用意しています。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">昼食は用意されていますか？</summary>
+      <div class="faq-a">施設内でお昼ごはんをご用意しています。体調やご希望に応じて、ご自身で持参いただくことも可能です。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">送迎はお願いできますか？</summary>
+      <div class="faq-a">状況に応じて個別にご相談いただけます。公共交通機関やご家族の送迎なども含め、無理のない通所方法を一緒に考えます。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">利用するための条件はありますか？</summary>
+      <div class="faq-a">
+        18歳以上で、以下のいずれかに当てはまる方がご利用の対象です。<br>
+        ・精神障がい（発達障がい、ADHD、統合失調症など）または知的障がいのある方<br>
+        ・障害者総合支援法の対象となる難病等をお持ちの方<br>
+        ・心身の不調により通院しており、一般就労が難しい方<br><br>
+        申請手続きについては、当グループの相談支援事業所『なるの実』の相談支援専門員がサポートいたしますので、まずはお気軽にご相談ください。（<a href="https://narunomi.com/" target="_blank" rel="noopener" style="color:var(--sun-orange-dark);font-weight:700;">なるの実 はこちら›</a>）
+      </div>
+    </details>
   </div>
 </section>
 
 <!-- CTA -->
 <section>
   <div class="wrap">
-    <div class="cta-band">
-      <div>
-        <h2>小さな疑問でも、気軽にお電話ください。</h2>
-        <p>「うちの場合はどうなるの？」そんな疑問もお気軽にどうぞ。<br>受付時間 9:00〜18:00</p>
-      </div>
-      <div class="btn-row">
-        <a href="tel:06-6105-3427" class="btn btn-primary" style="font-size:1.5rem; padding:14px 20px; letter-spacing:0.05em; white-space:nowrap;">06-6105-3427</a>
+    <div class="cta-band" style="background:var(--sun-orange);text-shadow:0 1px 3px rgba(0,0,0,.25);">
+      <h2 style="font-size:clamp(1.25rem,4.5vw,2rem);"><span>まずはお気軽に</span><span class="mb-break">お声がけください</span></h2>
+      <p style="font-size:clamp(.85rem,3vw,1.2rem);font-weight:700;">見学・体験のお申し込みは、お問合せフォームまたは<span class="mb-break">お電話にて受け付けています。</span></p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-outline" style="font-size:clamp(.78rem,3vw,.94rem);">見学・体験申し込みフォーム</a>
+        <a href="tel:0666158340" class="btn" style="background:#fff;color:var(--sun-orange-dark);">📞 06-6615-8340</a>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="site-footer" id="contact">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <img src="logo.png" alt="ルーツケアサービス ロゴ">
-          <span>
-            <span class="ja" style="display:block;">ルーツケアサービス</span>
-            <span class="en">ROOTS CARE SERVICE</span>
-          </span>
-        </div>
-        <p style="font-size:0.88rem; color:var(--brown-soft); max-width:260px;">〒559-0024<br>大阪市住之江区新北島1-2-1<br>オスカードリーム3階311号</p>
-      </div>
-      <div class="footer-col">
-        <h5>メニュー</h5>
-        <ul>
-          <li><a href="index.html">トップ</a></li>
-          <li><a href="about.html">私たちについて</a></li>
-          <li><a href="service.html">サービス</a></li>
-          <li><a href="news.html">お知らせ</a></li>
-          <li><a href="privacy.html">プライバシーポリシー</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>お問い合わせ</h5>
-        <p style="font-weight:700; color:var(--brown); font-size:1.6rem;">06-6105-3427</p>
-        <p>受付対応時間 9:00〜18:00</p>
-        <p>FAX 06-6105-3428</p>
-      </div>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>おひさまとにじのおうち</h4>
+      <p>大阪市住吉区の就労継続支援B型事業所。カフェ作業やパソコン作業、子ども食堂の運営などを通じて、一人ひとりのペースに合わせた就労支援を行っています。</p>
+      <p style="margin-top:14px;"><a href="https://www.instagram.com/ohisamatonijinoouti?igsh=d3p3ZjRoYXR2M2hj" target="_blank" rel="noopener">Instagram はこちら ›</a></p>
     </div>
-    <div class="footer-bottom">
-      <span>運営：ジール合同会社</span>
-      <span>&copy; Roots Care Service</span>
+    <div>
+      <h4>サイトマップ</h4>
+      <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="cafe.html">虹のカフェ</a></li>
+        <li><a href="kodomo-shokudo.html">子ども食堂</a></li>
+        <li><a href="blog.html">ブログ/お知らせ</a></li>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="group.html">グループ</a></li>
+        <li><a href="contact.html">お問合せフォーム</a></li>
+      </ul>
     </div>
+    <div class="footer-access">
+      <h4>アクセス</h4>
+      <p>〒558-0023<br>大阪市住吉区山之内2-11-29<br>JR我孫子町駅 徒歩9分<br>JR杉本町駅 徒歩7分<br>大阪メトロ御堂筋線 あびこ駅4番出口 徒歩14分</p>
+      <p style="margin-top:10px;">営業時間 9:00〜16:00<br>定休日 日曜日</p>
+      <p style="margin-top:10px;">TEL <a href="tel:0666158340">06-6615-8340</a><br>FAX 06-6615-8341</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright © おひさまとにじのおうち All Rights Reserved.</span>
+    <span>合同会社 Blue Horizon</span>
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

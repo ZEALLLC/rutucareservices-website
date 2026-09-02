@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問合せフォーム｜おひさまとにじのおうち</title>
+<meta name="description" content="おひさまとにじのおうちへのご質問や、見学・体験のお申し込みはこちらのページから承っております。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="mark"></span>
+      <span>おひさまとにじのおうち<small>就労継続支援B型作業所</small></span>
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="cafe.html">虹のカフェ</a></li>
+        <li><a href="kodomo-shokudo.html">子ども食堂</a></li>
+        <li><a href="blog.html">ブログ/お知らせ</a></li>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="group.html">グループ</a></li>
+        <li><a href="contact.html" class="active">お問合せ</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">☰</button>
+  </div>
+</header>
+<div class="nav-overlay"></div>
+<div class="rainbow-bar"></div>
+
+<div class="hero" style="padding:46px 0 50px;">
+  <div class="hero-inner">
+    <div class="hero-title-wrap" style="position:relative;display:inline-block;">
+      <h1 class="hero-title" style="margin:0;">お問合せフォーム</h1>
+      <img src="mascot-bear-final.png" alt="くまさんのイラスト" style="position:absolute;top:50%;left:100%;margin-left:14px;width:150px;height:auto;transform:translateY(-50%) rotate(-6deg);filter:drop-shadow(0 4px 8px rgba(0,0,0,.12));">
+    </div>
+    <p class="breadcrumb" style="margin-top:16px;"><a href="index.html">TOP</a> ＞ お問合せフォーム</p>
+  </div>
+</div>
+
+<section>
+  <div class="wrap two-col" style="align-items:flex-start;">
+    <div>
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <label>お名前/会社名 <span class="req">必須</span></label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-row">
+          <label>メールアドレス <span class="req">必須</span></label>
+          <input type="email" name="email" required>
+          <p style="font-size:.78rem;color:var(--text-sub);margin-top:6px;">合同会社Blue Horizonからの自動返信メール（ohisama.niji0701@gmail.com）を受け取れるようにしてください。</p>
+        </div>
+        <div class="form-row">
+          <label>メッセージ <span class="req">必須</span></label>
+          <textarea name="message" rows="6" required></textarea>
+        </div>
+        <div class="form-row checkbox-row">
+          <input type="checkbox" id="privacy" required>
+          <label for="privacy" style="font-weight:600;">個人情報保護方針に同意する（同意いただけない場合は送信ができません）</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">送信する</button>
+        <p id="formMessage" style="display:none;margin-top:16px;background:#FFF3DA;color:var(--sun-orange-dark);font-weight:700;padding:14px 18px;border-radius:12px;font-size:.88rem;"></p>
+      </form>
+      <p class="notice-box mt-40">※こちらのフォームは表示確認用のサンプルです。実際にメールを送受信できるようにするには、外部のフォーム送信サービス（Googleフォームなど）との連携が別途必要になります。</p>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:24px;">
+        <h3>電話でのお問い合わせ</h3>
+        <p><a href="tel:0666158340" style="font-size:1.3rem;font-weight:800;color:var(--sun-orange-dark);">06-6615-8340</a></p>
+        <p style="margin-top:6px;">営業時間：9:00〜16:00</p>
+      </div>
+      <div class="card" style="margin-bottom:24px;">
+        <h3>メールでのお問い合わせ</h3>
+        <p>左側のフォームから、いつでもお気軽にご連絡ください。</p>
+      </div>
+      <div class="card">
+        <h3>Instagram</h3>
+        <p><a href="https://www.instagram.com/ohisamatonijinoouti?igsh=d3p3ZjRoYXR2M2hj" target="_blank" rel="noopener" style="font-weight:800;color:var(--sun-orange-dark);">@ohisamatonijinoouti</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt-bg">
+  <div class="wrap faq-static">
+    <div class="section-head">
+      <h2 class="heading-framed">個人情報保護方針</h2>
+    </div>
+    <details class="faq-item" open>
+      <summary class="faq-q">個人情報の定義</summary>
+      <div class="faq-a">個人情報とは、氏名、生年月日、性別、電話番号、メールアドレス、職業、勤務先、保有資格など、特定の個人を識別できる情報を指します。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">個人情報の収集・利用</summary>
+      <div class="faq-a">合同会社Blue Horizon（以下「当社」）は、業務上必要な問い合わせや確認、サービス向上のための意見収集、各種お問い合わせへの対応など、目的の範囲内に限って個人情報を収集・利用します。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">個人情報の第三者提供</summary>
+      <div class="faq-a">当社は、ご本人の同意なく第三者へ個人情報を提供することはありません。ただし、法令等に基づき開示が求められる場合は、この限りではありません。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">委託先の監督</summary>
+      <div class="faq-a">個人情報の取扱いを第三者に委託する場合は、委託先の適格性を十分に審査したうえで、安全管理が適切に行われるよう必要な監督を行います。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">個人情報の管理</summary>
+      <div class="faq-a">当社は、組織的・物理的・人的・技術的な対策を講じ、個人情報の漏えいや滅失、き損の防止など、安全管理のために必要な措置を継続的に行います。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">情報内容の照会、修正または削除</summary>
+      <div class="faq-a">ご提供いただいた個人情報の照会・修正・削除をご希望の場合は、各窓口までご連絡ください。ご本人確認のうえ、速やかに対応いたします。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">セキュリティーについて</summary>
+      <div class="faq-a">お客様の情報を送信いただく際は、SSL（Secure Sockets Layer）による暗号化技術を用いて通信を保護しています。</div>
+    </details>
+    <details class="faq-item" open>
+      <summary class="faq-q">個人情報取り扱いに関する相談や苦情の連絡先</summary>
+      <div class="faq-a">個人情報の取り扱いに関するご質問・ご不明点・苦情等がございましたら、お問い合わせフォームよりご連絡ください。</div>
+    </details>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <h4>おひさまとにじのおうち</h4>
+      <p>大阪市住吉区の就労継続支援B型事業所。カフェ作業やパソコン作業、子ども食堂の運営などを通じて、一人ひとりのペースに合わせた就労支援を行っています。</p>
+      <p style="margin-top:14px;"><a href="https://www.instagram.com/ohisamatonijinoouti?igsh=d3p3ZjRoYXR2M2hj" target="_blank" rel="noopener">Instagram はこちら ›</a></p>
+    </div>
+    <div>
+      <h4>サイトマップ</h4>
+      <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="cafe.html">虹のカフェ</a></li>
+        <li><a href="kodomo-shokudo.html">子ども食堂</a></li>
+        <li><a href="blog.html">ブログ/お知らせ</a></li>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="group.html">グループ</a></li>
+        <li><a href="contact.html">お問合せフォーム</a></li>
+      </ul>
+    </div>
+    <div class="footer-access">
+      <h4>アクセス</h4>
+      <p>〒558-0023<br>大阪市住吉区山之内2-11-29<br>JR我孫子町駅 徒歩9分<br>JR杉本町駅 徒歩7分<br>大阪メトロ御堂筋線 あびこ駅4番出口 徒歩14分</p>
+      <p style="margin-top:10px;">TEL <a href="tel:0666158340">06-6615-8340</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright © おひさまとにじのおうち All Rights Reserved.</span>
+    <span>合同会社 Blue Horizon</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -300,8 +300,6 @@ section { position: relative; z-index: 1; padding: 86px 0; }
   border-radius: 999px;
 }
 
-.nw { white-space: nowrap; }
-
 /* ---------- News on top ---------- */
 .news-strip {
   background: var(--paper-deep);
@@ -592,15 +590,10 @@ footer.site-footer {
 }
 
 @media (max-width: 520px) {
-  .header-inner { padding: 12px 18px; gap: 10px; flex-wrap: wrap; row-gap: 6px; }
+  .header-inner { padding: 12px 18px; }
   .wrap, .hero-inner, section .wrap { padding-left: 18px; padding-right: 18px; }
   .brand-text .ja { font-size: 1.02rem; }
   .header-tel small { display: none; }
-  .brand-logo { height: 40px; }
-  .header-tel .num { font-size: 1.1rem; }
-  .cta-band p { white-space: normal !important; }
-  .breadcrumb { flex-wrap: wrap; row-gap: 4px; }
-  .nw { white-space: normal; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -653,7 +646,7 @@ footer.site-footer {
       <p>一人ひとりの暮らし方・望み方に寄り添い、<br>その人らしい毎日をサポートします。</p>
       <h2 style="font-weight:300; color:var(--teal);">「本当に必要とされるサポート」がしたい。</h2>
       <p>マニュアル通りの支援ではなく、<br>その人にとって本当に必要なサポートがしたい。<br>そんな想いから、「ルーツケアサービス」を立ち上げました。</p>
-      <p>日常のケアはもちろん、ご希望に応じて長時間の訪問を行ったり、<br>やってみたいことへ一緒にチャレンジしたり。<span class="nw">スタッフ全員が支援に真剣に向き合いながら、日々進化を続けています。</span></p>
+      <p>日常のケアはもちろん、ご希望に応じて長時間の訪問を行ったり、<br>やってみたいことへ一緒にチャレンジしたり。<span style="white-space:nowrap;">スタッフ全員が支援に真剣に向き合いながら、日々進化を続けています。</span></p>
       <p>ルーツケアサービススタッフ一同、<br>チームとして皆様のより良い暮らしをサポートいたします。</p>
     </div>
   </div>
